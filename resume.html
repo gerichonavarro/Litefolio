@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gericho - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+            padding: 2rem 1rem;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .resume-header {
+            background: linear-gradient(135deg, #6366f1, #f59e0b);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .resume-header .title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resume-content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #6366f1;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .experience-item:last-child,
+        .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .job-title,
+        .degree {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .company,
+        .school {
+            font-weight: 500;
+            color: #6366f1;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .description {
+            margin-top: 0.5rem;
+            color: #4b5563;
+        }
+
+        .description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .description li {
+            margin-bottom: 0.3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+
+        .skill-category h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #e0e7ff;
+            color: #6366f1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: #6366f1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .print-button {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: #f59e0b;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .print-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .resume-header {
+                padding: 2rem 1rem;
+            }
+
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .resume-content {
+                padding: 1.5rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .back-button,
+            .print-button {
+                position: static;
+                margin: 1rem;
+                display: inline-block;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .back-button,
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Portfolio</a>
+    <button onclick="window.print()" class="print-button">🖨️ Print Resume</button>
+
+    <div class="resume-container">
+        <div class="resume-header">
+            <h1>Gericho</h1>
+            <div class="title">Creative Freelancer & Digital Designer</div>
+            <div class="contact-info">
+                <span>📧 gericho@email.com</span>
+                <span>📱 +1 (555) 123-4567</span>
+                <span>🌐 www.gericho.com</span>
+                <span>📍 San Francisco, CA</span>
+            </div>
+        </div>
+
+        <div class="resume-content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p>Creative and results-driven freelancer with 5+ years of experience in digital design, web development, and brand identity creation. Passionate about crafting innovative solutions that help businesses grow and connect with their audiences. Proven track record of delivering high-quality projects on time and exceeding client expectations.</p>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="job-title">Senior Freelance Designer</div>
+                            <div class="company">Self-Employed</div>
+                        </div>
+                        <div class="date">2020 - Present</div>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Designed and developed 50+ websites and mobile applications for diverse clients</li>
+                            <li>Created comprehensive brand identities including logos, color schemes, and style guides</li>
+                            <li>Increased client conversion rates by an average of 35% through improved UX/UI design</li>
+                            <li>Managed multiple projects simultaneously while maintaining 98% client satisfaction rate</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="job-title">UI/UX Designer</div>
+                            <div class="company">TechStart Inc.</div>
+                        </div>
+                        <div class="date">2018 - 2020</div>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Led design team of 4 designers in creating user-centered digital experiences</li>
+                            <li>Conducted user research and usability testing to inform design decisions</li>
+                            <li>Collaborated with development teams to ensure seamless implementation of designs</li>
+                            <li>Reduced user bounce rate by 40% through strategic design improvements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="job-title">Junior Web Developer</div>
+                            <div class="company">Digital Solutions Co.</div>
+                        </div>
+                        <div class="date">2016 - 2018</div>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Developed responsive websites using HTML, CSS, JavaScript, and modern frameworks</li>
+                            <li>Optimized website performance resulting in 50% faster load times</li>
+                            <li>Collaborated with designers to translate mockups into functional web interfaces</li>
+                            <li>Maintained and updated existing client websites and applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="degree">Bachelor of Fine Arts in Graphic Design</div>
+                            <div class="school">California College of the Arts</div>
+                        </div>
+                        <div class="date">2012 - 2016</div>
+                    </div>
+                    <div class="description">
+                        <p>Graduated Magna Cum Laude. Specialized in digital design and user experience. Completed senior thesis on "The Impact of Color Psychology in Digital Interfaces."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Design Tools</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Adobe Creative Suite</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Sketch</span>
+                            <span class="skill-tag">InVision</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Development</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Specializations</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Brand Identity</span>
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Mobile Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Shopify</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Google Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section">
+                <h2 class="section-title">Certifications & Awards</h2>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="job-title">Google UX Design Professional Certificate</div>
+                            <div class="company">Google</div>
+                        </div>
+                        <div class="date">2021</div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="job-title">Best Portfolio Award</div>
+                            <div class="company">Design Awards 2022</div>
+                        </div>
+                        <div class="date">2022</div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="job-title">Adobe Certified Expert (ACE)</div>
+                            <div class="company">Adobe</div>
+                        </div>
+                        <div class="date">2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

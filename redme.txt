@@ -1,0 +1,60 @@
+# Litefolio – One Page Freelancer Portfolio Template
+
+**Litefolio** is a clean, modern, and fully responsive one-page HTML portfolio template designed specifically for freelancers, web developers, designers, virtual assistants, and consultants. This template allows you to professionally showcase your skills, services, projects, testimonials, and resume — all in one lightweight, fast-loading page.
+
+---
+
+## 📌 Features
+
+- ✅ One-page scroll layout  
+- ✅ Responsive design (mobile-first)  
+- ✅ Skills and services section  
+- ✅ Filterable project gallery  
+- ✅ Client testimonials  
+- ✅ Built-in contact form (non-functional placeholder)  
+- ✅ Downloadable resume section  
+- ✅ Light and dark mode toggle  
+- ✅ SEO-friendly and favicon-ready  
+- ✅ No external CSS/JS files — all code in a single `.html` file  
+- ✅ Clean and well-commented code  
+
+---
+
+## 📁 Files Included
+
+- `index.html` – The complete portfolio template in one file   
+- `resume.pdf` – (Optional) Replace this with your actual resume file  
+- Images folder – Replace placeholder project/testimonial images with your own
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3 (inline in `<style>`)  
+- Vanilla JavaScript (inline in `<script>`)  
+- Google Fonts (Poppins)  
+- Font Awesome (optional for icons)
+
+---
+
+## 🚀 How to Use
+
+1. Open `index.html` in any browser to preview your portfolio.  
+2. Replace placeholder text and images with your own content.  
+3. Update the resume download link if needed.  
+4. Customize colors, layout, or sections as desired.  
+5. Upload to your web hosting or use platforms like GitHub Pages or Netlify.
+
+---
+
+## 🔐 License
+
+This template is provided for personal and commercial use.  
+**Redistribution or resale of the template as-is is not allowed.**  
+Attribution is appreciated but not required.
+
+---
+
+
+
